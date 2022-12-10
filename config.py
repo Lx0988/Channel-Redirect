@@ -5,19 +5,19 @@ from logging.handlers import RotatingFileHandler
 
 
 # Get a bot token from botfather
-TG_BOT_TOKEN = os.environ.get("TG_BOT_TOKEN", "5300015911:AAHiwT8Ze-8bR3PaN0xGKlzxqNWADRFl7jg")
+TG_BOT_TOKEN = "5300015911:AAHiwT8Ze-8bR3PaN0xGKlzxqNWADRFl7jg"
 
 # Get from my.telegram.org (or @UseTGXBot)
-APP_ID = int(os.environ.get("APP_ID", "7961171"))
+APP_ID = 7961171
 
 # Get from my.telegram.org (or @UseTGXBot)
-API_HASH = os.environ.get("API_HASH", "b2d798626afaf5f1e4bdb33988e3d377")
+API_HASH = "b2d798626afaf5f1e4bdb33988e3d377"
 
 # Generate a user session string 
-TG_USER_SESSION = os.environ.get("TG_USER_SESSION", "BQBFcTPHCdz1KIUDTBghJjJxoop7sXzdQ23pynzKHbmXB9yEKGPGhMpZ9m3JVrJVIaOHpK3rJwPKVTzdJ1lS3uEm_01ecfeY0hAnfLhNWo433D-iA-LofkjogqnfBAxTbVv81GSkDfpJbDgV3Ew-fx_WZYvZD5ria5_niXm7KREGWaQoXbTOqiHquhSv0tqo5_2Gv300rOqA9X2BQxiTB_qIQV-EvSXw0Wn33Ou7L6vcXplsyj52tLqfiybzELl87eaHZrTtKfHiJR52WZetNs8xfOX10muOQYuPKUek_u0JvwcERuGv5_mY1Hj6GJS4aN2eMdo_X1A56e3EcpEspIkCAAAAAUSZaVUA")
+TG_USER_SESSION = "BQCU0K9e7yc3uf7BKg0HV5AXyKyH_bcIkPetK0wVuMOS3sjCoheeI1qM8kEPaaLOXMEkWe0r2tUdIfAujKQXCH7sX_bUJUAuVgitbCvEImlptn_BAglpPBrdzWbj0TRLhsBwxC_isLwqb2QaPguQYH2Dl0MsmNPyOlGDxa5decW4otL1-BDPmRr_x5uWKxLi5Vf2g74qU0TJLHNXBSFSVmDw-2eMAO-G30QvgmMzOm365RFRl9pFQqzORaielkbhXdyP1BIlgHXbVRibfEsDIbqBU3dw1YsBF8qZDFZESbiD1MjvqdHGkgmk6YFmaM9ZvtM6CQH_CtYsY-ZREPV07c6zAAAAAT2AioUA"
 
 # ID of Channel from which the bot shoul search files
-MAINCHANNEL_ID = os.environ.get("MAINCHANNEL_ID", "-1001531149575")
+MAINCHANNEL_ID = "-1001531149575"
 
 
 
