@@ -1,8 +1,3 @@
-#!/usr/bin/env python3
-# -*- coding: utf-8 -*-
-# @trojanzhex
-
-
 import re
 import pyrogram
 
@@ -42,8 +37,8 @@ async def filter(client: Bot, message: Message):
         if not btn:
             return
 
-        if len(btn) > 10: 
-            btns = list(split_list(btn, 10)) 
+        if len(btn) > 5: 
+            btns = list(split_list(btn, 5)) 
             keyword = f"{message.chat.id}-{message.message_id}"
             BUTTONS[keyword] = {
                 "total" : len(btns),
@@ -152,55 +147,6 @@ async def cb_handler(client: Bot, query: CallbackQuery):
 
         elif query.data == "pages":
             await query.answer()
-
-
-        elif query.data == "start_data":
-            await query.answer()
-            keyboard = InlineKeyboardMarkup([
-                [InlineKeyboardButton("HELP", callback_data="help_data"),
-                    InlineKeyboardButton("ABOUT", callback_data="about_data")],
-                [InlineKeyboardButton("⭕️ JOIN OUR CHANNEL ⭕️", url="https://t.me/TroJanzHEX")]
-            ])
-
-            await query.message.edit_text(
-                script.START_MSG.format(query.from_user.mention),
-                reply_markup=keyboard,
-                disable_web_page_preview=True
-            )
-
-
-        elif query.data == "help_data":
-            await query.answer()
-            keyboard = InlineKeyboardMarkup([
-                [InlineKeyboardButton("BACK", callback_data="start_data"),
-                    InlineKeyboardButton("ABOUT", callback_data="about_data")],
-                [InlineKeyboardButton("⭕️ SUPPORT ⭕️", url="https://t.me/TroJanzSupport")]
-            ])
-
-            await query.message.edit_text(
-                script.HELP_MSG,
-                reply_markup=keyboard,
-                disable_web_page_preview=True
-            )
-
-
-        elif query.data == "about_data":
-            await query.answer()
-            keyboard = InlineKeyboardMarkup([
-                [InlineKeyboardButton("BACK", callback_data="help_data"),
-                    InlineKeyboardButton("START", callback_data="start_data")],
-                [InlineKeyboardButton("SOURCE CODE", url="https://github.com/TroJanzHEX/Auto-Filter-Bot")]
-            ])
-
-            await query.message.edit_text(
-                script.ABOUT_MSG,
-                reply_markup=keyboard,
-                disable_web_page_preview=True
-            )
-
-
-    else:
-        await query.answer("Thats not for you!!",show_alert=True)
 
 
 def split_list(l, n):
